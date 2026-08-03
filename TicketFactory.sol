@@ -6,6 +6,7 @@ import "./SoulboundTicket.sol";
 /**
  * @title TicketFactory
  * @author BOTChain Hackathon Team
+ * @version 1.0.1
  * @notice Factory contract that creates a new SoulboundTicket instance for each event
  *         and maintains an on-chain registry of all events ever created.
  *

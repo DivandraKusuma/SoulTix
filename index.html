@@ -280,7 +280,7 @@
     .event-card-value {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--col-white);
+      color: var(--col-primary);
       margin-top: 2px;
     }
 
@@ -289,7 +289,7 @@
     }
 
     .event-card-value.supply-value {
-      color: var(--col-neon);
+      color: var(--col-primary);
     }
 
     /* Supply bar */
@@ -1843,9 +1843,9 @@
     <div class="container">
       <div>SoulTix 2026 Soulbound Ticket — BOTChain Build Week Hackathon</div>
       <div class="footer-links">
-        <a href="https://botscan.io" target="_blank" rel="noopener">BOTScan Explorer</a>
-        <a href="https://github.com" target="_blank" rel="noopener" id="footer-github">GitHub Repo</a>
-        <a href="https://x.com/BOTChain_ai" target="_blank" rel="noopener">@BOTChain_ai</a>
+        <a href="https://scan.botchain.ai" target="_blank" rel="noopener">BOTScan Explorer</a>
+        <a href="https://github.com/DivandraKusuma/SoulTix" target="_blank" rel="noopener" id="footer-github">GitHub Repo</a>
+        <a href="https://x.com/RantoGudelaaui" target="_blank" rel="noopener">@BOTChain_ai</a>
         <a href="README.md" target="_blank">README</a>
       </div>
       <div style="margin-top:8px; font-size:0.70rem; color:var(--col-muted);">
@@ -2056,7 +2056,7 @@
       });
     }
 
-    async function connectWallet() {
+    async function connectWallet(silent = false) {
       const ethereum = await getEthereum();
       if (!ethereum) {
         // Extension not found — open the official download page in a new tab
@@ -2065,15 +2065,19 @@
         return;
       }
       try {
-        showLoading('Connecting wallet…');
+        if (!silent) showLoading('Connecting wallet…');
         provider = new ethers.BrowserProvider(ethereum);
-        // Force MetaMask to show the account selection popup
-        try {
-          await provider.send('wallet_requestPermissions', [{ eth_accounts: {} }]);
-        } catch (err) {
-          if (err.code === 4001) throw err; // User rejected
-          // Ignore other errors (e.g., wallet doesn't support this method)
+        
+        // Force MetaMask to show the account selection popup ONLY if not silent
+        if (!silent) {
+          try {
+            await provider.send('wallet_requestPermissions', [{ eth_accounts: {} }]);
+          } catch (err) {
+            if (err.code === 4001) throw err; // User rejected
+            // Ignore other errors (e.g., wallet doesn't support this method)
+          }
         }
+        
         await provider.send('eth_requestAccounts', []);
         signer = await provider.getSigner();
         userAddress = await signer.getAddress();
@@ -2621,7 +2625,7 @@
         try {
           const accounts = await window.ethereum.request({ method: 'eth_accounts' });
           if (accounts.length > 0) {
-            await connectWallet();
+            await connectWallet(true);
           }
         } catch (_) { }
       }

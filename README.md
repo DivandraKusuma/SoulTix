@@ -28,8 +28,8 @@ A decentralized ticketing platform based on **soulbound (non-transferable)** NFT
 ---
 
 ## 🔗 Links
-
-- **Factory Contract (Testnet):** `0xd904FD7d858D7F70e2d9DEBD4567de1299172398` → [BOTScan Testnet](https://testnet.botscan.io)
+- **Factory Contract (Mainnet):** `` → [BOTScan Mainnet](https://scan.botchain.ai)
+- **Factory Contract (Testnet):** `0xd904FD7d858D7F70e2d9DEBD4567de1299172398` → [BOTScan Testnet]( https://scan.bohr.life/)
 - **Website Live:** `www.soultix.my.id`
 - **GitHub:** This repository
 
@@ -86,7 +86,7 @@ The system prevents a single wallet from buying more than 2 tickets, but it **do
 ### Limitation 2: Identity Verification is a Simulation (DUMMY)
 The `verifyMe()` function in the smart contract is currently a **Proof of Personhood simulation**, not a real verification:
 - Anyone can call `verifyMe()` and their status becomes "verified".
-- The form data (name & ID) is only processed in the UI and is never sent to or stored on the blockchain, ensuring user privacy.
+- **Any ID inputted in the form (whether it's a National ID card, Student ID, or others) is NEVER sent to the blockchain.** In a real production environment, this sensitive data would only be sent to a secure off-chain verifier's database (KYC Provider), and only the final *verified status* would be pushed to the blockchain.
 
 The purpose of this simulation is to demonstrate the **UX / workflow** of *Proof of Personhood* (verification → transaction → unlocking the purchase button) within the hackathon time constraints.
 
