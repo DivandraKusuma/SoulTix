@@ -32,6 +32,7 @@ A decentralized ticketing platform based on **soulbound (non-transferable)** NFT
 - **Factory Contract (Testnet):** `0xd904FD7d858D7F70e2d9DEBD4567de1299172398` → [BOTScan Testnet]( https://scan.bohr.life/)
 - **Website Live:** `www.soultix.my.id`
 - **GitHub:** This repository
+- **X/Twitter:** https://x.com/rantogudelaaui/status/2084229545746727017?s=46
 
 ---
 
