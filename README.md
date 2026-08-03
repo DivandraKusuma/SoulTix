@@ -28,7 +28,7 @@ A decentralized ticketing platform based on **soulbound (non-transferable)** NFT
 ---
 
 ## 🔗 Links
-- **Factory Contract (Mainnet):** `` → [BOTScan Mainnet](https://scan.botchain.ai)
+- **Factory Contract (Mainnet):** `0x4DC63169e3DB8144C242e3C0A10E58B0D8f1ec9A` → [BOTScan Mainnet](https://scan.botchain.ai)
 - **Factory Contract (Testnet):** `0xd904FD7d858D7F70e2d9DEBD4567de1299172398` → [BOTScan Testnet]( https://scan.bohr.life/)
 - **Website Live:** `www.soultix.my.id`
 - **GitHub:** This repository
@@ -145,6 +145,26 @@ If you wish to redeploy the system from scratch, follow these steps:
 - [ ] README explains the use case, how to use it, and Sybil resistance limitations
 - [ ] README explicitly states that identity verification is a simulation
 - [ ] Post on X tagging @BOTChain_ai
+
+---
+
+## 🚀 Future Work & Roadmap
+
+While this hackathon project serves as a functional Minimum Viable Product (MVP), we have big plans to evolve SoulTix into a production-ready ticketing platform:
+
+1. **📱 Ticket Scanning App for Organizers**
+   - Develop a companion mobile application (or PWA) that allows event organizers to scan the QR codes generated on the frontend.
+   - The scanner will instantly verify on-chain ownership using `ownerOf()` and update the status in a backend database to prevent double-entry (e.g., passing a screenshot to a friend).
+
+2. **🔐 Real Proof of Personhood Integration**
+   - Replace the current simulated verification with a real decentralized identity protocol (such as Worldcoin/World ID, or a ZK-KYC provider).
+   - This ensures a strict 1-person-1-wallet enforcement without compromising user privacy.
+
+3. **💳 Fiat Payment Gateway (Web2.5 Onboarding)**
+   - Integrate credit card processing to abstract away crypto complexities for non-crypto natives. Users will be able to buy tickets with fiat, and the backend will automatically purchase BOT tokens and trigger the mint function on their behalf.
+
+4. **🖼 Dynamic NFT Metadata**
+   - Implement dynamic metadata (ERC721URIStorage) so the ticket artwork can evolve (e.g., tearing the ticket virtually once it has been scanned at the venue).
 
 ---
 

@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 /**
  * @title SoulboundTicket
  * @author BOTChain Hackathon Team
- * @version 1.0.1
+ * @custom:version 1.0.1
  * @notice Soulbound (non-transferable) ERC721 concert ticket to prevent ticket scalping.
  *         Tickets are minted directly to the buyer's wallet and cannot be transferred.
  *         Built for the BOTChain Build Week Hackathon (Testnet Chain ID: 968, Mainnet: 677).
