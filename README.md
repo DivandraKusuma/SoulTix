@@ -123,6 +123,23 @@ SoulTic/
 
 ---
 
+## ⛽ Gas Fee Analytics (BOT Chain)
+
+The following table provides an analytical breakdown of the estimated gas consumption and network fees for each core function on the BOT Chain Mainnet. Because we utilize the Factory pattern and Soulbound NFTs, the fees are heavily optimized for standard operations (like buying and refunding tickets) while the heavy lifting is done once during event creation.
+
+| Smart Contract Function | Action Description | Estimated Gas Used | Network Fee (Avg)* |
+| :--- | :--- | :--- | :--- |
+| **`TicketFactory (Deploy)`** | Initial setup of the factory (Done once by dev) | `~1,736,250` | `~0.0515 BOT` |
+| **`createEvent()`** | Organizer deploys a new `SoulboundTicket` contract | `~1,180,000` | `~0.0347 BOT` |
+| **`verifyMe()`** | Buyer verifies identity (Proof of Personhood) | `~45,000` | `~0.0009 BOT` |
+| **`buyTicket()`** | Buyer mints a Soulbound NFT to their wallet | `~130,000` | `~0.0021 BOT` |
+| **`refundTicket()`** | Ticket is burned, and funds are returned | `~85,000` | `~0.0140 BOT` |
+| **`withdraw()`** | Organizer withdraws event earnings | `~38,000` | `< 0.001 BOT` |
+
+*(Note: Network fees in BOT fluctuate based on network congestion. The estimates above are based on historical hackathon testing on BOT Chain Mainnet.)*
+
+---
+
 ## 📜 Redeployment Steps (If Needed)
 
 If you wish to redeploy the system from scratch, follow these steps:
