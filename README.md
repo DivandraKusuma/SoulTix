@@ -33,7 +33,7 @@ A decentralized ticketing platform based on **soulbound (non-transferable)** NFT
 - **Website Live:** `www.soultix.my.id`
 - **GitHub:** This repository
 - **X/Twitter:** https://x.com/rantogudelaaui/status/2084229545746727017?s=46
-
+- **Verified Contract Address:** 0x4DC63169e3DB8144C242e3C0A10E58B0D8f1ec9A
 ---
 
 ## 📋 How to Use
