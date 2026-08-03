@@ -155,14 +155,14 @@ If you wish to redeploy the system from scratch, follow these steps:
 
 ## 🏆 Hackathon Deliverables Checklist
 
-- [ ] Contract address on BOT Chain Testnet
-- [ ] Contract address on BOT Chain Mainnet
-- [ ] Website live on custom domain
-- [ ] MetaMask integration & end-to-end functionality working
-- [ ] GitHub repo containing `.sol` files + `README.md`
-- [ ] README explains the use case, how to use it, and Sybil resistance limitations
-- [ ] README explicitly states that identity verification is a simulation
-- [ ] Post on X tagging @BOTChain_ai
+- [x] Contract address on BOT Chain Testnet
+- [x] Contract address on BOT Chain Mainnet
+- [x] Website live on custom domain
+- [x] MetaMask integration & end-to-end functionality working
+- [x] GitHub repo containing `.sol` files + `README.md`
+- [x] README explains the use case, how to use it, and Sybil resistance limitations
+- [x] README explicitly states that identity verification is a simulation
+- [x] Post on X tagging @BOTChain_ai
 
 ---
 
