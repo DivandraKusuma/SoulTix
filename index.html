@@ -2102,6 +2102,17 @@
       }
     }
 
+    async function updateBalanceUI() {
+      if (!provider || !userAddress) return;
+      try {
+        const balance = await provider.getBalance(userAddress);
+        document.getElementById('balance-display').textContent =
+          'Balance: ' + parseFloat(ethers.formatEther(balance)).toFixed(4) + ' BOT';
+      } catch (err) {
+        console.error('Failed to update balance', err);
+      }
+    }
+
     async function onWalletConnected() {
       localStorage.removeItem('walletDisconnected');
       // Update UI
@@ -2117,9 +2128,7 @@
       document.getElementById('wallet-display').title = userAddress;
 
       // Balance
-      const balance = await provider.getBalance(userAddress);
-      document.getElementById('balance-display').textContent =
-        'Balance: ' + parseFloat(ethers.formatEther(balance)).toFixed(4) + ' BOT';
+      await updateBalanceUI();
 
       // Wallet avatar color
       const hue = parseInt(userAddress.slice(2, 8), 16) % 360;
@@ -2571,6 +2580,7 @@
 
         // Reload data
         await loadContractData();
+        await updateBalanceUI();
 
       } catch (err) {
         hideLoading();
@@ -2591,6 +2601,7 @@
         hideLoading();
         showToast(`✅ Ticket #${tokenId} refunded successfully! Funds returned.`, 'success', 6000);
         await loadContractData();
+        await updateBalanceUI();
       } catch (err) {
         hideLoading();
         showToast('Refund failed: ' + parseError(err), 'error');
@@ -2765,6 +2776,7 @@
         showToast(`🎉 Event "${eventName}" deployed!`, 'success', 7000);
         await loadAllEvents();
         await loadMyEvents();
+        await updateBalanceUI();
       } catch (err) {
         hideLoading();
         showToast('Failed to create event: ' + parseError(err), 'error');
@@ -2869,7 +2881,10 @@
         hideLoading();
         showToast('✅ Funds withdrawn successfully!', 'success', 5000);
         // Add a slight delay to allow the RPC to reflect the new balance before refreshing the UI
-        setTimeout(() => loadMyEvents(), 2000);
+        setTimeout(async () => {
+          await loadMyEvents();
+          await updateBalanceUI();
+        }, 2000);
       } catch (err) {
         hideLoading();
         showToast('Withdrawal failed: ' + parseError(err), 'error');
