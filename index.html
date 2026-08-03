@@ -2073,7 +2073,7 @@
           try {
             await provider.send('wallet_requestPermissions', [{ eth_accounts: {} }]);
           } catch (err) {
-            if (err.code === 4001) throw err; // User rejected
+            if (err.code === 4001 || String(err).toLowerCase().includes('reject')) throw err;
             // Ignore other errors (e.g., wallet doesn't support this method)
           }
         }
@@ -2098,6 +2098,7 @@
     }
 
     async function onWalletConnected() {
+      localStorage.removeItem('walletDisconnected');
       // Update UI
       document.getElementById('btn-connect').classList.add('hidden');
       document.getElementById('btn-connect-hero').style.display = 'none';
@@ -2139,6 +2140,7 @@
       userAddress = null;
       provider = null; signer = null; contract = null;
       isExplicitlyDisconnected = true;
+      localStorage.setItem('walletDisconnected', 'true');
       document.getElementById('btn-connect').classList.remove('hidden');
       document.getElementById('btn-connect-hero').style.display = '';
       document.getElementById('btn-disconnect').classList.add('hidden');
@@ -2621,6 +2623,7 @@
 
     // Auto-connect if previously connected (silent, no popup)
     async function tryAutoConnect() {
+      if (localStorage.getItem('walletDisconnected') === 'true') return;
       if (window.ethereum) {
         try {
           const accounts = await window.ethereum.request({ method: 'eth_accounts' });
