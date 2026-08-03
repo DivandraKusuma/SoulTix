@@ -51,6 +51,12 @@ A decentralized ticketing platform based on **soulbound (non-transferable)** NFT
 3. Click **Create Event**. This transaction calls the `TicketFactory` to dynamically deploy a new `SoulboundTicket` smart contract exclusively for your event.
 4. Once the event is over or the refund window closes, you can withdraw the ticket sales revenue by clicking the **Withdraw Funds** button.
 
+### 📱 Mobile Access (Smartphones)
+Standard mobile browsers (like Chrome or Safari on iOS/Android) do not support web3 wallet extensions. To use this dApp on a smartphone:
+1. Open your Web3 Wallet App (**BO Wallet**, **MetaMask**, **Trust Wallet**, etc.).
+2. Navigate to the wallet's built-in **DApp Browser** (usually a compass 🧭 icon).
+3. Type in the website URL: `www.soultix.my.id`.
+4. The wallet will automatically inject the `window.ethereum` provider, and the "Connect Wallet" button will function exactly like on a desktop.
 ---
 
 ## 🔧 BOT Chain Network Configuration

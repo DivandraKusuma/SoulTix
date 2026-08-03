@@ -81,10 +81,13 @@
       display: inline-block;
       z-index: 1;
     }
+
     .highlight-underline::after {
       content: '';
       position: absolute;
-      left: 0; right: 0; bottom: 4px;
+      left: 0;
+      right: 0;
+      bottom: 4px;
       height: 8px;
       background-color: var(--col-accent);
       z-index: -1;
@@ -164,7 +167,7 @@
       z-index: 100;
       padding: 14px 0;
       background: var(--col-bg-blue);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .navbar .container {
@@ -237,7 +240,7 @@
 
     .hero-subtitle {
       font-size: 1.1rem;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       max-width: 520px;
       margin: 0 auto 36px;
       font-weight: 400;
@@ -373,12 +376,12 @@
     }
 
     .btn-ghost {
-      background: rgba(0,0,0,0.05);
+      background: rgba(0, 0, 0, 0.05);
       color: var(--col-text-dark);
     }
 
     .btn-ghost:hover:not(:disabled) {
-      background: rgba(0,0,0,0.08);
+      background: rgba(0, 0, 0, 0.08);
     }
 
     .btn-danger {
@@ -487,8 +490,8 @@
     }
 
     .tab-btn {
-      background: rgba(0,0,0,0.04);
-      border: 1px solid rgba(0,0,0,0.1);
+      background: rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.1);
       color: var(--col-muted);
       padding: 14px 32px;
       font-size: 1rem;
@@ -500,7 +503,7 @@
     }
 
     .tab-btn:hover {
-      background: rgba(0,0,0,0.08);
+      background: rgba(0, 0, 0, 0.08);
       color: var(--col-text-dark);
     }
 
@@ -581,7 +584,7 @@
     }
 
     .section-card:hover {
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
       transform: translateY(-2px);
     }
 
@@ -800,7 +803,7 @@
     .ticket-nft {
       background: #ffffff;
       border: 1px solid #000000;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
       border-radius: var(--radius-lg);
       padding: 24px;
       position: relative;
@@ -810,14 +813,14 @@
 
     .ticket-nft:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     }
 
     .ticket-nft-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
-      background: linear-gradient(135deg, rgba(79,156,249,0.05) 0%, rgba(255,228,146,0.05) 100%);
+      background: linear-gradient(135deg, rgba(79, 156, 249, 0.05) 0%, rgba(255, 228, 146, 0.05) 100%);
     }
 
     .ticket-nft-content {
@@ -948,7 +951,7 @@
 
     .why-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
     .why-card-icon {
@@ -965,7 +968,7 @@
 
     .why-card-desc {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       line-height: 1.6;
     }
 
@@ -988,11 +991,11 @@
        FOOTER
     ═══════════════════════════════════════════════════════════════ */
     .footer {
-      border-top: 1px solid rgba(0,0,0,0.05);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
       padding: 40px 0;
       text-align: center;
       background: var(--col-bg-blue);
-      color: rgba(255,255,255,0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-size: 0.82rem;
     }
 
@@ -1005,7 +1008,7 @@
     }
 
     .footer-links a {
-      color: rgba(255,255,255,0.8);
+      color: rgba(255, 255, 255, 0.8);
       font-weight: 600;
       transition: color 0.2s;
     }
@@ -1492,9 +1495,10 @@
       <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
         <span class="nav-chain" id="nav-chain-badge">BOT Chain Mainnet</span>
         <button id="btn-connect" class="btn btn-primary btn-sm" onclick="connectWallet()">
-          🦊 Connect Wallet
+          Connect Wallet
         </button>
-        <button id="btn-disconnect" class="btn btn-ghost btn-sm hidden" onclick="disconnectWallet()" style="color: white; border-color: rgba(255,255,255,0.3); background: transparent;">
+        <button id="btn-disconnect" class="btn btn-ghost btn-sm hidden" onclick="disconnectWallet()"
+          style="color: white; border-color: rgba(255,255,255,0.3); background: transparent;">
           Disconnect
         </button>
       </div>
@@ -1508,7 +1512,8 @@
         <span>🔗</span> Powered by BOT Chain
       </div>
       <h1 class="hero-title">The <span>SoulTix</span> Experience</h1>
-      <p class="hero-subtitle">The biggest Concert Organizer of the year. Tickets are soulbound NFTs — non-transferable, scalper-proof, minted directly to your wallet.</p>
+      <p class="hero-subtitle">The biggest Concert Organizer of the year. Tickets are soulbound NFTs — non-transferable,
+        scalper-proof, minted directly to your wallet.</p>
 
       <!-- Event Info Cards -->
       <div class="event-cards" role="list">
@@ -1520,12 +1525,12 @@
         <div class="event-card glass" role="listitem">
           <div class="event-card-icon">💎</div>
           <div class="event-card-label">Ticket Price</div>
-          <div class="event-card-value highlight" id="price-display">Loading…</div>
+          <div class="event-card-value highlight" id="price-display">Pick an Event</div>
         </div>
         <div class="event-card glass" role="listitem">
           <div class="event-card-icon">🎟</div>
           <div class="event-card-label">Tickets Left</div>
-          <div class="event-card-value supply-value" id="supply-display">Loading…</div>
+          <div class="event-card-value supply-value" id="supply-display">Pick an Event</div>
           <div class="supply-bar-wrap">
             <div class="supply-bar">
               <div class="supply-bar-fill" id="supply-bar-fill" style="width:100%"></div>
@@ -1538,10 +1543,10 @@
       <!-- Connect CTA (shown when not connected) -->
       <div id="connect-cta">
         <button id="btn-connect-hero" class="btn btn-primary btn-lg" onclick="connectWallet()">
-          🦊 Connect MetaMask to Buy Tickets
+          Connect Wallet to Buy Tickets
         </button>
         <p style="font-size:0.78rem; color:var(--col-muted); margin-top:12px;">
-          Requires MetaMask + BOT Chain Network
+          Requires Web3 Wallet (BO Wallet / MetaMask) on BOT Chain
         </p>
       </div>
     </div>
@@ -1717,10 +1722,9 @@
         <div class="section-card glass">
           <div class="section-label" style="color:#a78bfa;">Organizer Mode</div>
           <h2 class="section-title" id="org-create-heading">🎪 Create New Event</h2>
-          <p class="section-desc">Deploy a new soulbound ticket contract for your event in one transaction via the
-            TicketFactory.</p>
+          <p class="section-desc">Deploy a new soulbound ticket contract for your event in one transaction</p>
 
-          <div id="factory-status-note" class="factory-note" style="margin-bottom:18px;">
+          <div id="factory-status-note" class="factory-note" style="display:none; margin-bottom:18px;">
             <strong>⚠️ Factory Status:</strong> <span id="factory-status-text">Checking TicketFactory connection…</span>
           </div>
 
@@ -1758,7 +1762,7 @@
             </div>
 
             <button id="btn-create-event" class="btn btn-primary btn-full btn-lg" onclick="deployNewEvent()">
-              🚀 Deploy Event Contract via Factory
+              🚀 Deploy Event
             </button>
           </div>
 
@@ -1793,14 +1797,14 @@
   <!-- ═══════════════════════════════════════════════ WHY SOULBOUND (always visible) -->
   <section id="section-why" class="container why-soulbound" aria-labelledby="why-heading">
     <div class="section-card glass">
-      <h2 class="section-title" id="why-heading">🔒 Why Soulbound?</h2>
+      <h2 class="section-title" id="why-heading">🔗 Why SoulTix?</h2>
       <p class="section-desc">Explanation for judges and visitors about the on-chain anti-scalping mechanism.</p>
 
       <div class="why-grid">
         <div class="why-card glass" role="article">
           <div class="why-card-icon">🚫</div>
           <div class="why-card-title">Non-Transferable by Design</div>
-          <div class="why-card-desc">Soulbound tickets cannot be transferred after minting. The transfer() function is
+          <div class="why-card-desc">tickets is Soulbounded which cannot be transferred after minting. The transfer() function is
             overridden in the smart contract to always revert — no secondary market possible.</div>
         </div>
         <div class="why-card glass" role="article">
@@ -1844,9 +1848,10 @@
       <div>SoulTix 2026 Soulbound Ticket — BOTChain Build Week Hackathon</div>
       <div class="footer-links">
         <a href="https://scan.botchain.ai" target="_blank" rel="noopener">BOTScan Explorer</a>
-        <a href="https://github.com/DivandraKusuma/SoulTix" target="_blank" rel="noopener" id="footer-github">GitHub Repo</a>
-        <a href="https://x.com/RantoGudelaaui" target="_blank" rel="noopener">@BOTChain_ai</a>
-        <a href="README.md" target="_blank">README</a>
+        <a href="https://github.com/DivandraKusuma/SoulTix" target="_blank" rel="noopener" id="footer-github">GitHub
+          Repo</a>
+        <a href="https://x.com/RantoGudelaaui" target="_blank" rel="noopener">X</a>
+        <a href="https://github.com/DivandraKusuma/SoulTix/blob/main/README.md" target="_blank">README</a>
       </div>
       <div style="margin-top:8px; font-size:0.70rem; color:var(--col-muted);">
         Smart Contract on BOT Chain Mainnet (Chain ID: 677) · Soulbound ERC721 Ticket
@@ -2060,14 +2065,13 @@
       const ethereum = await getEthereum();
       if (!ethereum) {
         // Extension not found — open the official download page in a new tab
-        showToast('MetaMask extension not found. Opening install page in a new tab…', 'warn', 5000);
-        window.open('https://metamask.io/download/', '_blank', 'noopener');
+        showToast('Web3 wallet extension (MetaMask / BO Wallet) not found. Please install one.', 'warn', 7000);
         return;
       }
       try {
         if (!silent) showLoading('Connecting wallet…');
         provider = new ethers.BrowserProvider(ethereum);
-        
+
         // Force MetaMask to show the account selection popup ONLY if not silent
         if (!silent) {
           try {
@@ -2077,7 +2081,7 @@
             // Ignore other errors (e.g., wallet doesn't support this method)
           }
         }
-        
+
         await provider.send('eth_requestAccounts', []);
         signer = await provider.getSigner();
         userAddress = await signer.getAddress();
